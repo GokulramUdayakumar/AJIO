@@ -32,6 +32,22 @@ public class Ajio_03_MenPage {
 	public WebElement getMenShirts() {
 		return MenShirts;
 	}
+	
+	public WebElement getPriceButton() {
+		return PriceButton;
+	}
+
+	public WebElement getPriceBelow() {
+		return PriceBelow;
+	}
+	
+	public WebElement getSortBy() {
+		return SortBy;
+	}
+
+	public WebElement getFirstShirt() {
+		return FirstShirt;
+	}
 
 	@FindBy(xpath = "//a[text()='MEN']")
 	private WebElement Men;
@@ -53,24 +69,10 @@ public class Ajio_03_MenPage {
 
 	@FindBy(xpath = "(//div[@class='facet-linkhead'])[7]")
 	WebElement PriceBelow;
+	
+	@FindBy(xpath = "//div[@class='filter-dropdown']/select")
+	WebElement SortBy;
 
 	@FindBy(xpath = "(//div[@class='items'])[98]/div/div/div[1]")
-	WebElement FirstShirt;
-
-	public WebDriver getDriver() {
-		return driver;
-	}
-
-	public WebElement getPriceButton() {
-		return PriceButton;
-	}
-
-	public WebElement getPriceBelow() {
-		return PriceBelow;
-	}
-
-	public WebElement getFirstShirt() {
-		return FirstShirt;
-	}
-
+	WebElement FirstShirt;	
 }

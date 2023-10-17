@@ -1,8 +1,11 @@
 package com.ajio.pomrepo;
 
+import java.util.List;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.FindBys;
 import org.openqa.selenium.support.PageFactory;
 
 public class Ajio_04_ProductPage {
@@ -13,7 +16,7 @@ public class Ajio_04_ProductPage {
 		PageFactory.initElements(driver, this);
 	}
 
-	public WebElement getSize() {
+	public List<WebElement> getSize() {
 		return Size;
 	}
 
@@ -32,9 +35,9 @@ public class Ajio_04_ProductPage {
 	public WebElement getProceedToPayment() {
 		return ProceedToPayment;
 	}
-
-	@FindBy(xpath = "(//div[@class='slick-list'])[3]/div/div[1]/div")
-	private WebElement Size;
+	
+	@FindBys({@FindBy(xpath = "(//div[@class='slick-list'])[3]/div/div/div[@class='circle size-variant-item size-instock ']")})
+	private List <WebElement> Size;
 
 	@FindBy(xpath = "//span[text()='ADD TO BAG']")
 	private WebElement AddToBag;

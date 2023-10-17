@@ -7,16 +7,15 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.edge.EdgeOptions;
-import org.testng.annotations.AfterClass;
+import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
-import org.testng.annotations.AfterSuite;
-import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.BeforeTest;
 
 public class Ajio_BaseClass {
 	public WebDriver driver;
+	public ITestResult results;
 	public Ajio_ExcelUtility aexcelU = new Ajio_ExcelUtility();
 	public Ajio_FileUtility afileU = new Ajio_FileUtility();
 	public Ajio_ScreenShotUtility assU = new Ajio_ScreenShotUtility();
@@ -47,26 +46,28 @@ public class Ajio_BaseClass {
 	}
 
 	@AfterMethod
-	public void afterMethod() throws Exception {
-		
-		System.out.println("After Method");
+	public void AfterMethod(ITestResult result) throws IOException {
+		String testName = result.getName();
+		if (ITestResult.FAILURE == result.getStatus()) {
+			System.out.println("Test Failed ScreenShotName is => " + testName);
+			assU.tsWebPage(driver, testName);
+		}
 	}
 
-	//@AfterClass
+	// @AfterClass
 	public void MinimiseBrowser() throws Exception {
 		driver.manage().window().minimize();
 		driver.close();
 	}
 
-	//@AfterTest
+	// @AfterTest
 	public void CloseBrowser() {
 		driver.quit();
 	}
 
-	//@AfterSuite
+	// @AfterSuite
 	public void CleanCookies() {
 		System.out.println("@AfterSuite - Clean the cookies");
 		driver.manage().deleteAllCookies();
 	}
-
 }

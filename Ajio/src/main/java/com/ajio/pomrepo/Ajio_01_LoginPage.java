@@ -29,7 +29,7 @@ public class Ajio_01_LoginPage {
 		return StartShopping;
 	}
 
-	@FindBy(xpath = "//span [text()='Sign In / Join AJIO']")
+	@FindBy(xpath = "//span[text()='Sign In / Join AJIO']")
 	private WebElement SignIn;
 
 	@FindBy(xpath = "//input[@name='username']")

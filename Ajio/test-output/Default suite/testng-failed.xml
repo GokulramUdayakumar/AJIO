@@ -7,8 +7,8 @@
         <methods>
           <include name="PreConditions"/>
           <include name="HomePage"/>
+          <include name="AfterMethod"/>
           <include name="OpenBrowser"/>
-          <include name="afterMethod"/>
           <include name="OpenWebSite"/>
         </methods>
       </class> <!-- com.ajio.Execution.Ajio_Execution -->

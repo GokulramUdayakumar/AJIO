@@ -50,7 +50,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Default_suite" class="navigator-link ">
-                    <span>C:\Temp\testng-eclipse-1721679150\testng-customsuite.xml</span>
+                    <span>C:\Temp\testng-eclipse-688242499\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -129,16 +129,37 @@
                   <a name="HomePage">
                   </a> <!-- HomePage -->
                   <span class="method-name">HomePage</span>
-                  <div class="stack-trace">java.io.IOException: The filename, directory name, or volume label syntax is incorrect
-	at java.base/java.io.WinNTFileSystem.canonicalize0(Native Method)
-	at java.base/java.io.WinNTFileSystem.canonicalize(WinNTFileSystem.java:462)
-	at java.base/java.io.File.getCanonicalPath(File.java:626)
-	at org.apache.commons.io.FileUtils.requireCanonicalPathsNotEquals(FileUtils.java:2601)
-	at org.apache.commons.io.FileUtils.copyFile(FileUtils.java:842)
-	at org.apache.commons.io.FileUtils.copyFile(FileUtils.java:756)
-	at com.ajio.genericutility.Ajio_ScreenShotUtility.takeScreenshot(Ajio_ScreenShotUtility.java:20)
-	at com.ajio.Execution.Ajio_Execution.netPlay(Ajio_Execution.java:72)
-	at com.ajio.Execution.Ajio_Execution.HomePage(Ajio_Execution.java:86)
+                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//button[text()=&apos;Proceed to shippin&apos;]&quot;}
+  (Session info: chrome=117.0.5938.152)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.12.1&apos;, revision: &apos;8e34639b11&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.7&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [d452d7f6541f1fd8914dde26201284ba, findElement {using=xpath, value=//button[text()=&apos;Proceed to shippin&apos;]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 117.0.5938.152, chrome: {chromedriverVersion: 117.0.5938.149 (e3344ddefa1..., userDataDir: C:\Temp\scoped_dir14456_127...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56162}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56162/devtoo..., se:cdpVersion: 117.0.5938.152, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: d452d7f6541f1fd8914dde26201284ba
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:602)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:359)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:353)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy18.click(Unknown Source)
+	at com.ajio.pomrepo.Ajio_CartPage.VerifyCart(Ajio_CartPage.java:26)
+	at com.ajio.Execution.Ajio_Execution.netPlay(Ajio_Execution.java:82)
+	at com.ajio.Execution.Ajio_Execution.HomePage(Ajio_Execution.java:43)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -176,7 +197,7 @@
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Temp\testng-eclipse-1721679150\testng-customsuite.xml</span>
+            <span class="header-content">C:\Temp\testng-eclipse-688242499\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -229,12 +250,12 @@ data.addRows(1);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'HomePage')
 data.setCell(0, 2, 'com.ajio.Execution.Ajio_Execution')
-data.setCell(0, 3, 15738);
+data.setCell(0, 3, 50583);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 15 seconds</span>
+              <span class="suite-total-time">Total running time: 50 seconds</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -274,21 +295,21 @@ return data;
               </div> <!-- configuration-suite before -->
               <div class="configuration-test before">
                 <span class="method-name">PreConditions</span>
-                <span class="method-start">1928 ms</span>
+                <span class="method-start">3326 ms</span>
               </div> <!-- configuration-test before -->
               <div class="configuration-class before">
                 <span class="method-name">OpenWebSite</span>
-                <span class="method-start">2074 ms</span>
+                <span class="method-start">3495 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">HomePage</span>
-                <span class="method-start">6611 ms</span>
+                <span class="method-start">12392 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
-                <span class="method-name">afterMethod</span>
-                <span class="method-start">22351 ms</span>
+                <span class="method-name">AfterMethod([TestResult name=HomePage status=FAILURE method=Ajio_Execution.HomePage()[pri:2, instance:com.ajio.E...)</span>
+                <span class="method-start">62996 ms</span>
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
