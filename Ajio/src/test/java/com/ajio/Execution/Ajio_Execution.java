@@ -45,7 +45,6 @@ public class Ajio_Execution extends Ajio_BaseClass {
 			System.out.println("NetplayVerify Element Not Displayed");
 			hp.getAjioLogo().click();
 		}
-
 	}
 
 	public void netPlay(WebDriver driver) throws Exception {
